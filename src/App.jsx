@@ -6,6 +6,8 @@ import { HStack, VStack } from '@chakra-ui/react';
 import Header from './components/Header';
 import About from './components/About'
 import Roadmap from './components/Roadmap';
+import Feed from './components/Feed';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -22,8 +24,8 @@ function App() {
     <Header/>
     <About/>
     <Roadmap/>
-    
-
+    <Feed/>
+    <Footer/>
     
   
             

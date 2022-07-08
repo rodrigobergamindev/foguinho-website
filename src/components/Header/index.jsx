@@ -14,7 +14,7 @@ export default function Header() {
     style={{
         
         width:"100%",
- 
+        height: "100vh",
         filter: "brightness(70%)",
         objectFit:"cover",
         position:"absolute",
