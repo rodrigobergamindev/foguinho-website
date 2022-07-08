@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
     Drawer,
     DrawerBody,
@@ -17,13 +17,16 @@ import {
     Text,
     Box,
     Avatar,
-    Flex
+    Flex,
+    Heading,
+    Icon,
+    Stack
   } from '@chakra-ui/react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faHome, faList, faLocationDot, faPhone, faCalendar,faRss ,faUser, faSignOut} from '@fortawesome/free-solid-svg-icons'
-
-
+import { faBars,faHome, faList, faLocationDot, faPhone, faCalendar,faRss ,faUser, faSignOut, faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import { RiFacebookBoxFill, RiWhatsappLine, RiCarLine,RiHomeLine, RiInstagramLine, RiMessageLine, RiGpsLine } from "react-icons/ri";
+import {SiTelegram} from 'react-icons/si'
 
   
 
@@ -31,8 +34,11 @@ export default function DrawerMenu() {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
-    
 
+    const[activeInicio,setActiveInicio] = useState(false)
+    const[activeSobre,setActiveSobre] = useState(false)
+    const[activeRoteiros,setActiveRoteiros] = useState(false)
+    const[activeContato,setActiveContato] = useState(false)
   
     return (
       <HStack  alignSelf="flex-end" alignItems="flex-end" justifySelf="space-between">
@@ -46,72 +52,194 @@ export default function DrawerMenu() {
           placement='right'
           onClose={onClose}
           finalFocusRef={btnRef}
-          
+          size="full"
         >
           <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Menu</DrawerHeader>
+          <DrawerContent background="#448B8B" padding="20px">
+            <DrawerCloseButton color="white" fontSize="2xl" />
+            <DrawerHeader><Heading fontWeight="semibold" color="white">Menu</Heading></DrawerHeader>
   
-            <DrawerBody>
-            <VStack height={"full"} align="flex-start" marginTop={"16"} spacing="16">
+            <DrawerBody overflow="hidden">
+            <VStack  height={"full"} justify="center" spacing="16" paddingX={40}>
 
-            <VStack width="full">
+            <VStack width="full" fontSize="6xl" alignItems="flex-start" cursor="pointer">
 
-                    
-                
-                <Button colorScheme="blue" size='lg' width={"full"}>
-                  <HStack align="center" justify="center"><FontAwesomeIcon icon={faHome} fontSize="16px"/>Início</HStack>
-                   
-                  </Button>
               
-                </VStack>
               
-                <VStack width="full">
-                  <Button colorScheme="blue" size='lg' width={"full"}>
-                    <HStack align="center" justify="center"><FontAwesomeIcon icon={faUser} fontSize="16px"/><Text>Alterar Cadastro</Text></HStack>
-                    
-                  </Button>
-                </VStack>
+                <HStack 
+                align="center" 
+                justify="center" 
+                _hover={{}} 
+                onMouseOver={() => setActiveInicio(true)} 
+                onMouseLeave={() => setActiveInicio(false)}
                 
-
+                >
+                 
                 
-                <VStack width="full">
+                <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
+                    borderBottom:"solid",
+                    borderColor:"#E7C496"
+                 }}>Início</Text>
 
-                    
-                
-                <Button colorScheme="blue" size='lg' width={"full"}>
-                  <HStack align="center" justify="center"><FontAwesomeIcon icon={faCalendar} fontSize="16px"/>
-                  <Text>Agenda</Text>
-                  </HStack>
-                   
-                  </Button>
-              
-                </VStack>
-
-                <VStack width="full">
-
-                    
-                
-                <Button colorScheme="blue" size='lg' width={"full"}>
-                  <HStack align="center" justify="center"><FontAwesomeIcon icon={faRss} fontSize="16px"/>
-                  <Text>Novidades</Text></HStack>
-                   
-                  </Button>
-              
-                </VStack>
-                
-
-
-                <VStack width="full">
-                  <Button colorScheme="blue" size='lg' width={"full"}>
-                  <HStack align="center" justify="center"><FontAwesomeIcon icon={faSignOut} fontSize="16px"/>
+                <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
+                  visibility: `${activeInicio? "visible": "hidden"}`,
+                  transform: `${activeInicio? "translateX(50%)": "translateX(0%)"}`,
+                  transition: "all 0.2s ease-in-out"
                   
-                  <Text>Sair</Text>
-            
-                  </HStack>
-                  </Button>
+                }}/>
+                </HStack>
+                   
+             
+              
+              </VStack>
+              
+              <VStack width="full" fontSize="6xl" alignItems="flex-start" cursor="pointer">
+
+                    
+                
+              
+              <HStack 
+              align="center" 
+              justify="center" 
+              _hover={{}} 
+              onMouseOver={() => setActiveRoteiros(true)} 
+              onMouseLeave={() => setActiveRoteiros(false)}
+
+              >
+              
+
+              <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
+                  borderBottom:"solid",
+                  borderColor:"#E7C496"
+              }}>Roteiros</Text>
+
+              <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
+                visibility: `${activeRoteiros? "visible": "hidden"}`,
+                transform: `${activeRoteiros? "translateX(50%)": "translateX(0%)"}`,
+                transition: "all 0.2s ease-in-out"
+                
+              }}/>
+              </HStack>
+                
+
+
+              </VStack>
+
+              <VStack width="full" fontSize="6xl" alignItems="flex-start" cursor="pointer">
+
+                    
+                
+              
+                <HStack 
+                align="center" 
+                justify="center" 
+                _hover={{}} 
+                onMouseOver={() => setActiveSobre(true)} 
+                onMouseLeave={() => setActiveSobre(false)}
+
+                >
+
+
+                <Text borderBottom="solid" color="white" fontWeight="bold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
+                    borderBottom:"solid",
+                    borderColor:"#E7C496"
+                }}>Sobre</Text>
+
+                <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
+                  visibility: `${activeSobre? "visible": "hidden"}`,
+                  transform: `${activeSobre? "translateX(50%)": "translateX(0%)"}`,
+                  transition: "all 0.2s ease-in-out"
+                  
+                }}/>
+                </HStack>
+                  
+
+
                 </VStack>
+                
+              <VStack width="full" fontSize="6xl" alignItems="flex-start" cursor="pointer">
+
+                    
+                
+              
+              <HStack 
+              align="center" 
+              justify="center" 
+              _hover={{}} 
+              onMouseOver={() => setActiveContato(true)} 
+              onMouseLeave={() => setActiveContato(false)}
+
+              >
+              
+
+              <Text borderBottom="solid" color="white" fontWeight="bold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
+                  borderBottom:"solid",
+                  borderColor:"#E7C496"
+              }}>Contato</Text>
+
+              <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
+                visibility: `${activeContato? "visible": "hidden"}`,
+                transform: `${activeContato? "translateX(50%)": "translateX(0%)"}`,
+                transition: "all 0.2s ease-in-out"
+                
+              }}/>
+              </HStack>
+                
+
+
+              </VStack>
+
+              
+
+              
+
+
+              <Stack p={5} direction="row" alignItems="center"  width="100%" >
+            <a href="https://www.instagram.com/autocertocars/"rel="noreferrer" target="_blank">
+                <Icon 
+                fontSize="2xl" 
+                color="gray.300"
+                as={RiInstagramLine}
+                transition="all 0.3s ease-in-out"
+                cursor="pointer"
+                _hover={{
+                    color:"#E7C496"
+                }} 
+                />
+            </a>
+
+            <a href="https://www.facebook.com/autocertocars/" rel="noreferrer" target="_blank">
+                <Icon 
+                fontSize="2xl" 
+                color="gray.300" 
+                as={RiFacebookBoxFill}
+                transition="all 0.3s ease-in-out"
+                cursor="pointer"
+                _hover={{
+                    color:"#E7C496"
+                }}
+                />
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=5511963290492&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20ve%C3%ADculo."rel="noreferrer" target="_blank">
+                <Icon fontSize="2xl" 
+                color="gray.300" 
+                as={RiWhatsappLine}
+                transition="all 0.3s ease-in-out"
+                cursor="pointer"
+                _hover={{
+                    color:"#E7C496"
+                }} 
+                />
+            </a>
+
+            <Box flex="1" width="100px" height="1px" backgroundColor="gray.50"/>
+            
+            <Icon as={RiGpsLine} color="#E7C496"/><Text color="#E7C496" fontWeight="light">Av. do Imperador, 4550 - São Miguel Paulista, São Paulo - SP, 08050-000</Text>
+            </Stack>
+
+          
+
 
 
             </VStack>
