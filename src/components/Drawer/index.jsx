@@ -53,14 +53,20 @@ export default function DrawerMenu() {
           onClose={onClose}
           finalFocusRef={btnRef}
           size="full"
+          
         >
           <DrawerOverlay />
-          <DrawerContent background="#448B8B" padding="20px">
-            <DrawerCloseButton color="white" fontSize="2xl" />
-            <DrawerHeader><Heading fontWeight="semibold" color="white">Menu</Heading></DrawerHeader>
+          <DrawerContent p="4" background="#448B8B">
+          
+            <DrawerHeader>
+            <DrawerCloseButton  color="white" fontSize="xl"  mt="6"/>
+              <Heading fontWeight="semibold" color="white">Menu</Heading>
+             
+              
+              </DrawerHeader>
   
-            <DrawerBody overflow="hidden">
-            <VStack  height={"full"} justify="center" spacing="16" paddingX={40}>
+            <DrawerBody overflow="hidden" >
+            <VStack  height={"full"} justify="center" spacing="16" paddingX={20}>
 
             <VStack width="full" fontSize="6xl" alignItems="flex-start" cursor="pointer">
 
