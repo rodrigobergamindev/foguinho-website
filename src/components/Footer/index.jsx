@@ -36,7 +36,7 @@ export default function Footer() {
                         </HStack>
 
                         <HStack>
-                          <Text cursor="pointer"  transition="all 0.3s ease-in-out" _hover={{color:"#E7C496"}}>Roteiros</Text>
+                          <Text cursor="pointer"  transition="all 0.3s ease-in-out" _hover={{color:"#E7C496"}}>Charters</Text>
                         </HStack>
                      
                         <HStack>

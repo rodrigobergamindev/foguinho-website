@@ -117,7 +117,7 @@ export default function DrawerMenu() {
               <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
                   borderBottom:"solid",
                   borderColor:"#E7C496"
-              }}>Roteiros</Text>
+              }}>Charters</Text>
 
               <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
                 visibility: `${activeRoteiros? "visible": "hidden"}`,
