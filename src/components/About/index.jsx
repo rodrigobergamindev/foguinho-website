@@ -19,15 +19,9 @@ export default function About() {
 
               <VStack spacing={10} marginTop="10px" maxW="350px" width="100%" textAlign="justify">
                 <Text color="whiteAlpha.900">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
-                content here', making it look like readable English
-                </Text>
-
-                <Text color="whiteAlpha.900">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
-                as opposed to using 'Content here, content here', making it look like readable English
+                Marinheiro Leonardo Valente , vasta experiência com barcos para passeios e travessias.   
+                Por 6 anos morou a bordo de um veleiro e durante esse período vivenciou inúmeras experiências nas paradisíacas ilhas de Paraty, 
+                dando-lhe uma ampla experiência turística. Habilitado pela Agencia da Capitanias dos Portos de Paraty.
                 </Text>
 
                 <VStack alignItems="flex-start" alignSelf="flex-start" fontFamily="Poppins">
