@@ -85,7 +85,7 @@ export default function FormWhats() {
             }}/>
           </HStack>
         <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14666.804969461053!2d-44.74261542522572!3d-23.217555962372707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9d6d04d08d0dd9%3A0xea35e93f7a8ac64d!2sParaty%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1657289869816!5m2!1spt-BR!2sbr" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.2291394413364!2d-44.71185408502827!3d-23.234747384846013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdee490548851e216!2zMjPCsDE0JzA1LjEiUyA0NMKwNDInMzQuOCJX!5e0!3m2!1spt-BR!2sbr!4v1658256465583!5m2!1spt-BR!2sbr">
 
         </iframe>
         </VStack>
