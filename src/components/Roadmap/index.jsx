@@ -52,7 +52,8 @@ export default function Roadmap() {
         
  
         <Box as={Swiper}
-          
+          name="charters"
+        
           w="100%"
          
             display="flex"

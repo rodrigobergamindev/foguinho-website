@@ -4,32 +4,45 @@ import { RiCheckFill, RiMailLine, RiMailSendFill, RiWhatsappFill, RiWhatsappLine
 
 export default function About() {
   return (
-    <VStack backgroundColor="#448B8B" spacing={20} paddingTop={40} boxShadow="inset 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)" >
+    <VStack name="sobre" backgroundColor="#448B8B" spacing={20} paddingTop={20} boxShadow="inset 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)" >
         <Grid gap={[0,10]} w="100%"
             maxW="1200px" templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]}  justifyItems="center" padding="10px"
      
             >
-              <VStack alignItems="center">
-              <Image src='https://images.unsplash.com/photo-1656653731059-4c93b1cd2382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80' borderRadius="10px" height="650px" width="100%" objectFit="fill" alt='Leonardo Valente' />
+              <VStack >
+              <Image src='/images/perfil.jpg' width="450px" objectFit="fill" borderRadius="2px" boxShadow="20px  20px white"/>
 
               </VStack>
-              <VStack>
+              <VStack spacing={10}>
               <Box  width="100%" borderColor="white" borderStyle="solid" borderTopWidth="4px" borderRightWidth="4px" paddingTop="25px" paddingRight="55px" >
               <Text fontSize="20px" letterSpacing="2px" fontWeight="semibold" color="#E7C496">UM POUCO SOBRE MIM</Text>
 
               <VStack spacing={10} marginTop="10px" maxW="350px" width="100%" textAlign="justify">
                 <Text color="whiteAlpha.900">
-                Marinheiro Leonardo Valente , vasta experiência com barcos para passeios e travessias.   
-                Por 6 anos morou a bordo de um veleiro e durante esse período vivenciou inúmeras experiências nas paradisíacas ilhas de Paraty, 
-                dando-lhe uma ampla experiência turística. Habilitado pela Agencia da Capitanias dos Portos de Paraty.
+                Eu sou Leonardo Valente, marinheiro inscrito e habilitado pela Agencia da Capitanias dos Portos de Paraty, 
+                com uma vasta experiência de mais de 6 anos em turismo e navegação, por muito tempo da minha vida morei a bordo 
+                de um veleiro onde obtive a maior parte da minha vivência marítima, velejei nas mais diversas ilhas de Paraty, 
+                onde pude conhecer sobre rotas, navegação e os pontos principais visitados por milhares de turistas todos os anos.
+                </Text>
+
+                <Text color="whiteAlpha.900">
+                Nos meus charters, você poderá encontrar roteiros para Ilha do Cedro, Ilha do Cachorro, Forte da Tapera, Praia do Chicopê, Engenho D'água e muitas outras ilhas e pontos paradísiacos em Paraty.
+                </Text>
+
+                <Text color="whiteAlpha.900">
+                Viaje com quem entende e conhece a região, viaje com a Foguinho.
                 </Text>
 
                 <VStack alignItems="flex-start" alignSelf="flex-start" fontFamily="Poppins">
-                  <Text color="#E7C496" fontSize="4xl" fontWeight="bold">CIR 386A2018003181</Text>
+                  <Text color="#E7C496" fontSize="2xl" fontWeight="bold">CIR 386A2018003181</Text>
                   <Text color="#E7C496" fontSize="4xl">LEONARDO VALENTE</Text>
                 </VStack>
               </VStack>
               </Box>
+
+          
+
+            
               </VStack>
         </Grid>
 

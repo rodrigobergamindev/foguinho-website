@@ -3,7 +3,7 @@ import React from 'react'
 import { RiMailLine, RiPhoneFill, RiWhatsappLine } from 'react-icons/ri'
 import FormWhats from '../FormWhats'
 import FooterContent from './FooterContent'
-
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default function Footer() {
   return (
@@ -32,19 +32,47 @@ export default function Footer() {
                         <StackDivider/>
                         <StackDivider/>
                         <HStack>
+                        <Link activeClass="active" 
+                 className="inicio" 
+                 to="inicio" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}>
                           <Text cursor="pointer" transition="all 0.3s ease-in-out" _hover={{color:"#E7C496"}}>Início</Text>
+                          </Link>
                         </HStack>
 
                         <HStack>
+                        <Link activeClass="active" 
+                 className="charters" 
+                 to="charters" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}>
                           <Text cursor="pointer"  transition="all 0.3s ease-in-out" _hover={{color:"#E7C496"}}>Charters</Text>
+                          </Link>
                         </HStack>
                      
                         <HStack>
+                        <Link activeClass="active" 
+                 className="sobre" 
+                 to="sobre" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}>
                           <Text cursor="pointer"  transition="all 0.3s ease-in-out" _hover={{color:"#E7C496"}}>Sobre</Text>
+                          </Link>
                         </HStack>
                        
                         <HStack>
+                        <Link activeClass="active" 
+                 className="contato" 
+                 to="contato" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}>
                           <Text cursor="pointer"  transition="all 0.3s ease-in-out" _hover={{color:"#E7C496"}}>Contato</Text>
+                          </Link>
                         </HStack>
                         
                     </Box>

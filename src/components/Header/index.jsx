@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <VStack width="100%" alignItems="center" justifyContent="center" height="100vh" spacing={10} overflow="hidden">
+    <VStack width="100%" alignItems="center" justifyContent="center" height="100vh" spacing={10} overflow="hidden" name="inicio" className="inicio" id="inicio">
    
    <video
     autoPlay

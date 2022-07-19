@@ -20,7 +20,7 @@ export default function FormWhats() {
   return (
 
     
-  <Grid margin="0 auto" zIndex={3} borderRadius="5px" gap={10} templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]} width="100%" maxWidth="1200px"  bg="#E7C496" p={10} boxShadow="0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)">
+  <Grid name="contato" className="contato" margin="0 auto" zIndex={3} borderRadius="5px" gap={10} templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]} width="100%" maxWidth="1200px"  bg="#E7C496" p={10} boxShadow="0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)">
             <VStack spacing="7" alignItems="flex-start" width="100%" >
             <Heading  color="white" fontWeight="light">
               Entre em <strong>Contato</strong>

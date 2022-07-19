@@ -24,10 +24,10 @@ import {
   } from '@chakra-ui/react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faHome, faList, faLocationDot, faPhone, faCalendar,faRss ,faUser, faSignOut, faArrowRight} from '@fortawesome/free-solid-svg-icons'
-import { RiFacebookBoxFill, RiWhatsappLine, RiCarLine,RiHomeLine, RiInstagramLine, RiMessageLine, RiGpsLine } from "react-icons/ri";
+import { faBars, faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import { RiFacebookBoxFill, RiWhatsappLine, RiInstagramLine,RiGpsLine } from "react-icons/ri";
 import {SiTelegram} from 'react-icons/si'
-
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
   
 
 export default function DrawerMenu() {
@@ -78,14 +78,19 @@ export default function DrawerMenu() {
                 _hover={{}} 
                 onMouseOver={() => setActiveInicio(true)} 
                 onMouseLeave={() => setActiveInicio(false)}
-                
                 >
                  
                 
-                <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
+                 <a><Link activeClass="active" 
+                 className="inicio" 
+                 to="inicio" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}>
+                  <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
                     borderBottom:"solid",
                     borderColor:"#E7C496"
-                 }}>Início</Text>
+                 }}>Início</Text></Link></a>
 
                 <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
                   visibility: `${activeInicio? "visible": "hidden"}`,

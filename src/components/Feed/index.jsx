@@ -1,7 +1,41 @@
 import { Box, Button, Flex, Grid, Heading, HStack, Icon, Image, Stack, Text, VStack } from '@chakra-ui/react'
-
+import SwiperCore, { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react'
 
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+
+
+
+const images = [
+    {
+      image: '/images/carousel/1.jpg'
+    },
+    {
+      image: '/images/carousel/3.jpg'
+    },
+    {
+      image: '/images/carousel/4.jpg'
+    },
+    {
+      image: '/images/carousel/5.jpg'
+    },
+    {
+      image: '/images/carousel/6.jpg'
+    },
+    {
+      image: '/images/carousel/7.jpg'
+    },
+    {
+      image: '/images/carousel/8.jpg'
+    },
+    {
+      image: '/images/carousel/9.jpg'
+    },
+    {
+      image: '/images/carousel/10.jpg'
+    }
+  ]
 
 export default function Feed() {
     return (
@@ -35,8 +69,56 @@ export default function Feed() {
         </Flex>
         </Grid>
 
-        <Box width="100%">
-        
+        <Box width="100%" height="350px" paddingY={10}>
+        <Box as={Swiper}
+          
+          w="100%"
+         
+            display="flex"
+             alignItems="center" 
+             justifyContent="center"
+             spaceBetween={10}
+            slidesPerView={4}
+            className="mySwiper"
+            scrollbar={{ draggable: true }}
+            autoplay={{delay: 2500,  disableOnInteraction: false}}
+          speed={1200}
+
+             >
+        {
+          images.map((item,index) => {
+
+            return (
+              
+              <SwiperSlide key={index}>
+               
+                
+                
+                <Box as={Flex} justifyContent="center" >
+               
+                  <Image src={item.image} width="250px" borderRadius="5px" height="250px" objectFit="cover" transition="all 0.3s ease"_hover={
+                    {
+                        filter: "brightness(70%)"
+                    }
+                  }/>
+                
+                </Box>
+
+             
+                
+          
+              
+            </SwiperSlide>
+            
+            )
+
+          }
+
+          
+            
+          )
+        }
+        </Box>
         </Box>
 
 
