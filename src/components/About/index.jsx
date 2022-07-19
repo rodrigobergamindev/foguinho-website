@@ -73,12 +73,6 @@ export default function About() {
                         <Text fontSize="17px" color="whiteAlpha.900">Todos os passeios possuem 6 horas de duração, com até 3 paradas</Text>
                 </HStack>
 
-
-                <HStack spacing={5}>
-                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
-                        <Text fontSize="17px" color="whiteAlpha.900">Embarque geralmente as 9h e desembarque às 15h</Text>
-                </HStack>
-
                 <HStack spacing={5}>
                         <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
                         <Text fontSize="17px" color="whiteAlpha.900">Embarque geralmente as 9h e desembarque às 15h ou conforme no horário acertado com o cliente</Text>
