@@ -29,8 +29,10 @@ export default function FormWhats() {
       initialValues={{ name: '', message: '' }}
       onSubmit={(values, actions) => {
         const {name, message} = values
-       console.log(name)
-       console.log(message)
+       setTimeout(() => {
+        window.open(`https://api.whatsapp.com/send?phone=5511959943034&text=Ol%C3%A1%2C%20meu%20nome%20e%20${name}%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters`)
+        actions.resetForm()
+       }, 1500)
       }}
 
     >
@@ -67,6 +69,7 @@ export default function FormWhats() {
           >
             Enviar
           </Button>
+        
         </Form>
       )}
     </Formik>
@@ -74,20 +77,19 @@ export default function FormWhats() {
 
         <VStack align="center" justify="center" width="100%" height="100%" >
           <HStack alignSelf="flex-end" spacing={3}>
-            <Image src="/icons/facebook.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
+            <a href="https://www.facebook.com/leonardo.diasvalente" target="_blank"><Image src="/icons/facebook.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
-            }}/>
-            <Image src="/icons/instagram.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
+            }}/></a>
+            <a href="https://www.instagram.com/leonardodiasvalente/" target="_blank"><Image src="/icons/instagram.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
-            }}/>
-            <Image src="/icons/whatsapp.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
+            }}/></a>
+            <a href="https://api.whatsapp.com/send?phone=5511959943034&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters" target="_blank"><Image src="/icons/whatsapp.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
-            }}/>
+            }}/></a>
           </HStack>
-        <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.2291394413364!2d-44.71185408502827!3d-23.234747384846013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdee490548851e216!2zMjPCsDE0JzA1LjEiUyA0NMKwNDInMzQuOCJX!5e0!3m2!1spt-BR!2sbr!4v1658256465583!5m2!1spt-BR!2sbr">
+          <iframe width="100%" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.2291394413364!2d-44.71185408502827!3d-23.234747384846013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdee490548851e216!2zMjPCsDE0JzA1LjEiUyA0NMKwNDInMzQuOCJX!5e0!3m2!1spt-BR!2sbr!4v1658407458088!5m2!1spt-BR!2sbr" referrerpolicy="no-referrer-when-downgrade">
 
-        </iframe>
+          </iframe>
         </VStack>
     </Grid>
   

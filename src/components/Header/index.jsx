@@ -2,6 +2,8 @@ import { VStack, Text, HStack } from '@chakra-ui/react'
 import { faAnglesDown, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 export default function Header() {
   return (
@@ -44,11 +46,17 @@ export default function Header() {
 
     
     </VStack>      
-    <HStack alignSelf="center" transition="all 0.3s ease" _hover={{
+    <Link activeClass="active" 
+                 className="sobre" 
+                 to="sobre" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}><HStack alignSelf="center" transition="all 0.3s ease" _hover={{
       transform: 'translateY(2.1rem);'
     }}>
       <FontAwesomeIcon icon={faAnglesDown} cursor="pointer" color="white" fontWeight="light" fontSize="50px"/>
     </HStack>
+    </Link>
     </VStack>
   )
 }

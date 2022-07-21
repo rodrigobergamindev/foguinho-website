@@ -64,7 +64,7 @@ export default function Feed() {
                 filter: "brightness(90%)"
             }}>
                 <Image src="/icons/instagram.svg" width="30px"/>
-            <Text fontWeight="light" fontSize="xl" color="white">@foguinho_embarcacoes</Text>
+            <a href="https://www.instagram.com/leonardodiasvalente/" target="_blank"><Text fontWeight="light" fontSize="xl" color="white">@leonardodiasvalente</Text></a>
             </HStack>
         </Flex>
         </Grid>

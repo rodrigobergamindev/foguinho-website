@@ -7,26 +7,26 @@ import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, 
 
 export default function Footer() {
   return (
-    <VStack height="" background="#448B8B" spacing={40}>
+    <VStack background="#448B8B" spacing={40} >
      
         <FormWhats/>
         <FooterContent/>
 
        
           
-          <HStack zIndex={30} justifyContent="space-between" width="100%" maxWidth="1200px"  fontFamily="Poppins">
+          <HStack zIndex={30}  width="100%" maxWidth="1200px"  fontFamily="Poppins"  >
             
 
-            <VStack alignItems="flex-start" width="100%">
-              <Text fontSize="50px" fontWeight="bold" color="white">FOGUINHO</Text>
+            <VStack alignItems="flex-start" justifyContent="flex-start" width="100%">
+              <Text fontSize="48px" fontWeight="bold" color="white">FOGUINHO</Text>
 
              
-              <Text color="white">Rua Caraipe das Águas, 1194 - Sobre Loja</Text>
-              <Text color="white">Jardim dos Ypês – São Paulo, SP</Text>
-              <Text color="white">CEP: 08161-360</Text>
+              <Text color="white">Rod. Rio-Santos, BR 101 - KM 578,7</Text>
+              <Text color="white">Boa Vista, Paraty - RJ</Text>
+              <Text color="white">CEP: 23970-000</Text>
             </VStack>
 
-            <VStack alignItems="flex-start" alignSelf="flex-start" width="100%">
+            <VStack alignItems="center" alignSelf="flex-start" width="100%">
                     <Box as={VStack}  alignItems="flex-start" color="white">
                         <Heading fontWeight="bold" fontSize="lg" letterSpacing={3} color="#E7C496">MAPA DO SITE</Heading>
                         <StackDivider/>
@@ -78,13 +78,13 @@ export default function Footer() {
                     </Box>
             </VStack>
 
-            <VStack alignItems="flex-start" alignSelf="flex-start" width="100%">
+            <VStack alignItems="center" alignSelf="flex-start" width="100%">
                     <Box as={VStack}  alignItems="flex-start" color="whiteAlpha.900">
                         <Heading fontWeight="bold" fontSize="lg" letterSpacing={3} color="#E7C496">CONTATO</Heading>
                         <StackDivider/>
                         <StackDivider/>
                         <HStack>
-                        <Icon as={RiMailLine} fontSize="20"/><Text>foguinho_embarcacoes@gmail.com</Text>
+                        <Icon as={RiMailLine} fontSize="20"/><Text>telow@hotmail.com</Text>
                         </HStack>
 
                         <HStack>

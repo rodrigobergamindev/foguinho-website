@@ -81,16 +81,18 @@ export default function DrawerMenu() {
                 >
                  
                 
-                 <a><Link activeClass="active" 
+                 <Link activeClass="active" 
                  className="inicio" 
                  to="inicio" 
                  spy={true} 
                  smooth={true} 
-                 duration={500}>
+                 duration={500}
+                 onClick={onClose}
+                 >
                   <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
                     borderBottom:"solid",
                     borderColor:"#E7C496"
-                 }}>Início</Text></Link></a>
+                 }}>Início</Text></Link>
 
                 <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
                   visibility: `${activeInicio? "visible": "hidden"}`,
@@ -119,10 +121,19 @@ export default function DrawerMenu() {
               >
               
 
+              
+              <Link activeClass="active" 
+                 className="charters" 
+                 to="charters" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}
+                 onClick={onClose}
+                 >
               <Text borderBottom="solid" color="white" fontWeight="semibold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
                   borderBottom:"solid",
                   borderColor:"#E7C496"
-              }}>Charters</Text>
+              }}>Charters</Text></Link>
 
               <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
                 visibility: `${activeRoteiros? "visible": "hidden"}`,
@@ -150,11 +161,18 @@ export default function DrawerMenu() {
 
                 >
 
-
+            <Link activeClass="active" 
+                 className="sobre" 
+                 to="sobre" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}
+                 onClick={onClose}
+                 >
                 <Text borderBottom="solid" color="white" fontWeight="bold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
                     borderBottom:"solid",
                     borderColor:"#E7C496"
-                }}>Sobre</Text>
+                }}>Sobre</Text></Link>
 
                 <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
                   visibility: `${activeSobre? "visible": "hidden"}`,
@@ -183,10 +201,17 @@ export default function DrawerMenu() {
               >
               
 
-              <Text borderBottom="solid" color="white" fontWeight="bold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
+              <Link activeClass="active" 
+                 className="contato" 
+                 to="contato" 
+                 spy={true} 
+                 smooth={true} 
+                 duration={500}
+                 onClick={onClose}
+                 ><Text borderBottom="solid" color="white" fontWeight="bold" borderColor="transparent" transition="all 0.3s ease-in-out" _hover={{
                   borderBottom:"solid",
                   borderColor:"#E7C496"
-              }}>Contato</Text>
+              }}>Contato</Text></Link>
 
               <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
                 visibility: `${activeContato? "visible": "hidden"}`,
