@@ -231,7 +231,7 @@ export default function DrawerMenu() {
 
 
               <Stack p={5} direction="row" alignItems="center"  width="100%" >
-            <a href="https://www.instagram.com/autocertocars/"rel="noreferrer" target="_blank">
+            <a href="https://www.instagram.com/leonardodiasvalente/"rel="noreferrer" target="_blank">
                 <Icon 
                 fontSize="2xl" 
                 color="gray.300"
@@ -244,7 +244,7 @@ export default function DrawerMenu() {
                 />
             </a>
 
-            <a href="https://www.facebook.com/autocertocars/" rel="noreferrer" target="_blank">
+            <a href="https://www.facebook.com/leonardodiasvalente/" rel="noreferrer" target="_blank">
                 <Icon 
                 fontSize="2xl" 
                 color="gray.300" 
@@ -257,7 +257,7 @@ export default function DrawerMenu() {
                 />
             </a>
 
-            <a href="https://api.whatsapp.com/send?phone=5511963290492&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20ve%C3%ADculo."rel="noreferrer" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20ve%C3%ADculo."rel="noreferrer" target="_blank">
                 <Icon fontSize="2xl" 
                 color="gray.300" 
                 as={RiWhatsappLine}

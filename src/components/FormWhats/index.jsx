@@ -30,7 +30,7 @@ export default function FormWhats() {
       onSubmit={(values, actions) => {
         const {name, message} = values
        setTimeout(() => {
-        window.open(`https://api.whatsapp.com/send?phone=5511959943034&text=Ol%C3%A1%2C%20meu%20nome%20e%20${name}%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters`)
+        window.open(`https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20meu%20nome%20e%20${name}%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters`)
         actions.resetForm()
        }, 1500)
       }}
@@ -83,7 +83,7 @@ export default function FormWhats() {
             <a href="https://www.instagram.com/leonardodiasvalente/" target="_blank"><Image src="/icons/instagram.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
             }}/></a>
-            <a href="https://api.whatsapp.com/send?phone=5511959943034&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters" target="_blank"><Image src="/icons/whatsapp.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
+            <a href="https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters" target="_blank"><Image src="/icons/whatsapp.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
             }}/></a>
           </HStack>
