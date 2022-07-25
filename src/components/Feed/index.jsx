@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, Heading, HStack, Icon, Image, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, Heading, HStack, Icon, Image, Stack, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 import SwiperCore, { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react'
@@ -38,6 +38,13 @@ const images = [
   ]
 
 export default function Feed() {
+
+  const isWideVersion = useBreakpointValue ({
+    base: false,
+    lg: true
+})
+
+
     return (
         <Stack 
            spacing={10} 
@@ -47,6 +54,7 @@ export default function Feed() {
             p={[5,20]}
             flexDirection="column"
             backgroundColor="#448B8B"
+            paddingY={[20,"auto"]}
             >
 
             
@@ -54,22 +62,22 @@ export default function Feed() {
 
         <Grid borderRadius="5px" gap={10} templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]} width="100%"  bg="#E7C496" p={10} boxShadow="0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)">
             <VStack spacing="7">
-        <Heading alignSelf="flex-start" fontSize={["2xl","4xl"]} fontWeight="normal" color="white">Conheça o nosso <strong>Instagram</strong></Heading>
+        <Heading alignSelf="flex-start" fontSize={["xl","4xl"]} fontWeight="normal" color="white">Conheça o meu <strong>Instagram</strong></Heading>
         
             <Text alignSelf="flex-start" fontSize={["lg","2xl"]} color="white" >Fique sempre por dentro das nossas novidades em primeira mão!</Text>
         </VStack>
 
         <Flex align="center" justify="center">
-            <HStack background="#448B8B" padding="25px" borderRadius="5px" cursor="pointer" transition="all 0.3s ease" _hover={{
+            <HStack background="#448B8B" padding={["15px","25px"]} borderRadius="5px" cursor="pointer" transition="all 0.3s ease" _hover={{
                 filter: "brightness(90%)"
             }}>
                 <Image src="/icons/instagram.svg" width="30px"/>
-            <a href="https://www.instagram.com/leonardodiasvalente/" target="_blank"><Text fontWeight="light" fontSize="xl" color="white">@leonardodiasvalente</Text></a>
+            <a href="https://www.instagram.com/leonardodiasvalente/" target="_blank"><Text fontWeight="light" fontSize={["lg","xl"]} color="white">@leonardodiasvalente</Text></a>
             </HStack>
         </Flex>
         </Grid>
 
-        <Box width="100%" height="350px" paddingY={10}>
+        <Box width="100%" height={["450px","350px"]} paddingY={10}>
         <Box as={Swiper}
           
           w="100%"
@@ -78,7 +86,7 @@ export default function Feed() {
              alignItems="center" 
              justifyContent="center"
              spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={isWideVersion? 4 : 1}
             className="mySwiper"
             scrollbar={{ draggable: true }}
             autoplay={{delay: 2500,  disableOnInteraction: false}}
@@ -96,7 +104,7 @@ export default function Feed() {
                 
                 <Box as={Flex} justifyContent="center" >
                
-                  <Image src={item.image} width="250px" borderRadius="5px" height="250px" objectFit="cover" transition="all 0.3s ease"_hover={
+                  <Image src={item.image} width={["350px","250px"]} borderRadius="5px" height={["350px","250px"]} objectFit="cover" transition="all 0.3s ease"_hover={
                     {
                         filter: "brightness(70%)"
                     }

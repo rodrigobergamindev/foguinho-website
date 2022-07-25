@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Grid, Heading, HStack, Icon, Image, Input, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Grid, Heading, HStack, Icon, Image, Input, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 import { Field, Formik, Form } from 'formik'
 
 
@@ -16,6 +16,11 @@ export default function FormWhats() {
       }
 
 
+      const isWideVersion = useBreakpointValue ({
+        base: false,
+        lg: true
+    })
+
 
   return (
 
@@ -30,7 +35,7 @@ export default function FormWhats() {
       onSubmit={(values, actions) => {
         const {name, message} = values
        setTimeout(() => {
-        window.open(`https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20meu%20nome%20e%20${name}%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters`)
+        window.open(`https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20meu%20nome%20é%20${name}%20${message}`)
         actions.resetForm()
        }, 1500)
       }}
@@ -53,7 +58,7 @@ export default function FormWhats() {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.message && form.touched.message}>
                 <FormLabel htmlFor='message' color="white" fontWeight="semibold">Mensagem</FormLabel>
-                <Input {...field} id='message' type="message" placeholder='Envie uma mensagem...' width="450px"/>
+                <Input {...field} id='message' type="message" placeholder='Envie uma mensagem...' width="250px"/>
                 <FormErrorMessage>{form.errors.message}</FormErrorMessage>
               </FormControl>
             )}
@@ -75,7 +80,7 @@ export default function FormWhats() {
     </Formik>
           </VStack>
 
-        <VStack align="center" justify="center" width="100%" height="100%" >
+        <VStack align={["flex-start","center"]} justify={["flex-start","center"]} width="100%" height="100%" >
           <HStack alignSelf="flex-end" spacing={3}>
             <a href="https://www.facebook.com/leonardo.diasvalente" target="_blank"><Image src="/icons/facebook.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"

@@ -29,15 +29,15 @@ export default function Header() {
 
 
    <VStack alignSelf="center" maxWidth="1400px" width="100%" padding={20} alignItems="flex-start">
-   <Text fontWeight="light" fontSize="7xl" color="white">
+   <Text fontWeight="light" fontSize={["3xl","7xl"]} color="white">
     DESBRAVE
     </Text> 
     
-    <Text fontWeight="light" fontSize="7xl" color="white">
+    <Text fontWeight="light" fontSize={["3xl","7xl"]} color="white">
     DESCUBRA
     </Text>  
 
-    <Text fontWeight="extrabold" fontSize="7xl" color="transparent" css={{
+    <Text fontWeight="extrabold" fontSize={["3xl","7xl"]} color="transparent" css={{
       WebkitTextStrokeWidth: '2px',
       WebkitTextStrokeColor: ' #E7C496'
     }}>

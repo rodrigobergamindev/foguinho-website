@@ -4,20 +4,25 @@ import { RiCheckFill, RiMailLine, RiMailSendFill, RiWhatsappFill, RiWhatsappLine
 
 export default function About() {
   return (
-    <VStack name="sobre" backgroundColor="#448B8B" spacing={20} paddingTop={20} boxShadow="inset 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)" >
-        <Grid gap={[0,10]} w="100%"
+    <VStack name="sobre" backgroundColor="#448B8B" alignItems="center" justifyContent="center" spacing={10} paddingTop={20} boxShadow="inset 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)" >
+        <Grid
+        paddingY={20}
+       
+        gap={[10,10]} w="100%"
             maxW="1200px" templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]}  justifyItems="center" padding="10px"
-     
+            backgroundColor="#448B8B"
             >
-              <VStack >
-              <Image src='/images/perfil.jpg' width="450px" objectFit="fill" borderRadius="2px" boxShadow="20px  20px white"/>
+              <VStack padding={['0','10px']} spacing={[0,20]}>
+              <Image src='/images/perfil.jpg' width={["350px","450px"]} height={["350px","auto"]} objectFit={["cover","fill"]} borderRadius="2px" boxShadow={["0","20px  20px white"]}/>
 
               </VStack>
+
+
               <VStack spacing={10}>
-              <Box  width="100%" borderColor="white" borderStyle="solid" borderTopWidth="4px" borderRightWidth="4px" paddingTop="25px" paddingRight="55px" >
+              <Box  width="100%" borderColor="white" borderStyle="solid" borderTopWidth={["0","4px"]} borderRightWidth={["0","4px"]} paddingTop={["0","25px"]} paddingRight={["0","55px"]} >
               <Text fontSize="20px" letterSpacing="2px" fontWeight="semibold" color="#E7C496">UM POUCO SOBRE MIM</Text>
 
-              <VStack spacing={10} marginTop="10px" maxW="350px" width="100%" textAlign="justify">
+              <VStack spacing={[5,10]} marginTop="10px" maxW="350px" width="100%" textAlign="justify">
                 <Text color="whiteAlpha.900">
                 Eu sou Leonardo Valente, marinheiro inscrito e habilitado pela Agencia da Capitanias dos Portos de Paraty, 
                 com uma vasta experiência de mais de 6 anos em turismo e navegação, por muito tempo da minha vida morei a bordo 
@@ -34,23 +39,20 @@ export default function About() {
                 </Text>
 
                 <VStack alignItems="flex-start" alignSelf="flex-start" fontFamily="Poppins">
-                  <Text color="#E7C496" fontSize="2xl" fontWeight="bold">CIR 386A2018003181</Text>
-                  <Text color="#E7C496" fontSize="4xl">LEONARDO VALENTE</Text>
+                  <Text color="#E7C496" fontSize={["lg","2xl"]} fontWeight="bold">CIR 386A2018003181</Text>
+                  <Text color="#E7C496" fontSize={["2xl","4xl"]}>LEONARDO VALENTE</Text>
                 </VStack>
               </VStack>
               </Box>
 
-          
-
-            
               </VStack>
         </Grid>
 
-        <Box w="100%" backgroundColor="whiteAlpha.600">
-        <Grid gap={[0,10]} w="100%"
-            maxW="1200px" templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]}  justifyItems="center" padding={20}
+        <Box w="100%" height="100%"  backgroundColor="whiteAlpha.500">
+        <Grid gap={[10,10]} w="100%"
+            maxW="1200px" templateColumns={["repeat(1,1fr)","repeat(2, 1fr)"]}  justifyItems="center"  padding={[5,20]}
             margin="0 auto"
-            
+            paddingBottom={20}
             >
               
               <VStack>
@@ -59,28 +61,28 @@ export default function About() {
               <VStack alignItems="flex-start" borderTopWidth="2px" paddingY="10px">
               <Text fontSize="12px" fontWeight="medium" letterSpacing="3px" color="whiteAlpha.900">VENHA VIAJAR COM A FOGUINHO</Text>
               <Text fontSize="20px" letterSpacing="2px" fontWeight="semibold" color="#448B8B">ALGUNS DIFERENCIAIS DOS NOSSOS CHARTERS</Text>
-              <Box width="20%" height="2px" backgroundColor="whiteAlpha.900" marginTop="10px"/>
+              <Box width="20%" height="2px"  marginTop="10px"/>
               </VStack>
               <VStack spacing={5} marginTop="10px" maxW="350px" width="100%" alignItems="flex-start" justifyContent="flex-start">
                 
                 <HStack  spacing={5}>
-                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
-                        <Text fontSize="17px" color="whiteAlpha.900">Marinheiro com vasta experiência em todas as ilhas de Paraty</Text>
+                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Marinheiro com vasta experiência em todas as ilhas de Paraty</Text>
                 </HStack>
            
                 <HStack spacing={5}>
-                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
-                        <Text fontSize="17px" color="whiteAlpha.900">Todos os passeios possuem 6 horas de duração, com até 3 paradas</Text>
+                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Todos os passeios possuem 6 horas de duração, com até 3 paradas</Text>
                 </HStack>
 
                 <HStack spacing={5}>
-                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
-                        <Text fontSize="17px" color="whiteAlpha.900">Embarque geralmente as 9h e desembarque às 15h ou conforme no horário acertado com o cliente</Text>
+                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Embarque geralmente as 9h e desembarque às 15h ou conforme no horário acertado com o cliente</Text>
                 </HStack>
 
                 <HStack spacing={5}>
-                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
-                        <Text fontSize="17px" color="whiteAlpha.900">Roteiros personalizados de acordo com a preferência do cliente</Text>
+                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Roteiros personalizados de acordo com a preferência do cliente</Text>
                 </HStack>
               </VStack>
 
@@ -94,7 +96,7 @@ export default function About() {
               </VStack>
 
               <VStack alignItems="center">
-              <Image src='/images/foguinho.jpg' borderRadius="10px" height="650px" width="100%" objectFit="cover" filter="brightness(90%)" alt='Embarcação Foguinho' />
+              <Image src='/images/foguinho.jpg' borderRadius="4px" height={["350px","650px"]} width="100%" objectFit="cover" filter="brightness(90%)" alt='Embarcação Foguinho' />
 
               </VStack>
         </Grid>

@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { Box, HStack, Text, VStack, Image, Flex, Stack, Grid, Link } from '@chakra-ui/react';
+import { Box, HStack, Text, VStack, Image, Flex, Stack, Grid, Link, useBreakpointValue } from '@chakra-ui/react';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
@@ -47,86 +47,92 @@ const roadmaps = [
 
 
 export default function Roadmap() {
+
+  const isWideVersion = useBreakpointValue ({
+    base: false,
+    lg: true
+})
   
     return (
         
  
-        <Box as={Swiper}
-          name="charters"
-        
-          w="100%"
-         
-            display="flex"
-             alignItems="center" 
-             justifyContent="center"
-             spaceBetween={10}
-            slidesPerView={1}
-            navigation={true}
-            modules={Navigation}
-            className="mySwiper"
-            scrollbar={{ draggable: true }}
-            autoplay={{delay: 6000,  disableOnInteraction: false}}
-          speed={1200}
+      <Box
+      as={Swiper}
+      name="charters"
+    
+      w="100%"
+     
+        display="flex"
+         alignItems="center" 
+         justifyContent="center"
+         spaceBetween={10}
+        slidesPerView={1}
+        navigation={isWideVersion? true: false}
+        modules={Navigation}
+        className="mySwiper"
+        scrollbar={{ draggable: true }}
+        autoplay={{delay: 6000,  disableOnInteraction: false}}
+      speed={1200}
 
-             >
-        {
-          roadmaps.map((item,index) => {
+         >
+    {
+      roadmaps.map((item,index) => {
 
-            return (
+        return (
+          
+          <SwiperSlide key={index}>
+           
+            
+            
+            <Box as={Flex} justifyContent="center" width="100%" height={isWideVersion? '80vh': '450px'} >
+           
+              <Image src={item.image} width="100%" height="100%" objectFit="cover" position="absolute" filter="brightness(70%)"/>
               
-              <SwiperSlide key={index}>
-               
-                
-                
-                <Box as={Flex} justifyContent="center" width="100%" height="80vh" >
-               
-                  <Image src={item.image} width="100%" height="100%" objectFit="cover" position="absolute" filter="brightness(70%)"/>
-                  
-                  <VStack alignItems="flex-start" spacing={10}  
-                  padding="10px"
-                  justifySelf="flex-start"
-                  maxW="1200px"
-                  width="100%"
-                  alignSelf="flex-start"
-                  borderRadius="5px"
-                  paddingY="50px"
-                 
-              >
-                <VStack alignItems="flex-start"  zIndex={5}>
-                <Text textShadow="0 4px 30px rgba(0, 0, 0, 0.1)" fontSize="5xl" color="#E7C496" fontWeight="semibold">{item.title}</Text>
-                <Text textShadow="0 4px 30px rgba(0, 0, 0, 0.1)" color="#E7C496" fontSize="2xl">{item.city}</Text>
-                </VStack>
-
-                <VStack padding="8px"
-                 background="rgba(255, 255, 255, 0.2)"
-                 boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
-                 backdropFilter="blur(10px)"
-                 css={{
-                   WebkitBackdropFilter: "blur(10px)"
-                 }}
-                >
-                  <Text fontSize="xl" color="whiteAlpha.900" textAlign="justify">{item.description}</Text>
-                </VStack>
-              </VStack>
-                
-                </Box>
-
+              <VStack alignItems="flex-start" spacing={10}  
+              padding="10px"
+              justifySelf="flex-start"
+              maxW="1200px"
+              width="100%"
+              alignSelf="flex-start"
+              borderRadius="5px"
+              paddingY="50px"
              
-                
-          
-              
-            </SwiperSlide>
+          >
+            <VStack alignItems="flex-start"  zIndex={5}>
+            <Text textShadow="0 4px 30px rgba(0, 0, 0, 0.1)" fontSize={["2xl","5xl"]} color="#E7C496" fontWeight="semibold">{item.title}</Text>
+            <Text textShadow="0 4px 30px rgba(0, 0, 0, 0.1)" color="#E7C496" fontSize={["lg","2xl"]}>{item.city}</Text>
+            </VStack>
+
+            <VStack padding="8px"
+             background="rgba(255, 255, 255, 0.2)"
+             boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
+             backdropFilter="blur(10px)"
+             css={{
+               WebkitBackdropFilter: "blur(10px)"
+             }}
+            >
+              <Text fontSize={["sm","xl"]} color="whiteAlpha.900" textAlign="justify">{item.description}</Text>
+            </VStack>
+          </VStack>
             
-            )
+            </Box>
 
-          }
-
-          
+         
             
-          )
-        }
+      
+          
+        </SwiperSlide>
+        
+        )
 
-      </Box>
+      }
+
+      
+        
+      )
+    }
+
+  </Box>
   
     )
   
