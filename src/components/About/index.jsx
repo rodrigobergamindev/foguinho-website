@@ -90,7 +90,7 @@ export default function About() {
                 filter: "brightness(85%)"
               }}>
                 <a 
-      href="https://api.whatsapp.com/send?phone=5511959943034&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters"
+      href="https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters"
       target="_blank"
       rel="noreferrer"
       >
