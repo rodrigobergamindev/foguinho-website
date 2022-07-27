@@ -89,7 +89,13 @@ export default function About() {
               <HStack marginTop="30px" backgroundColor="#448B8B" paddingY="7px" borderRadius="5px" w="100%" maxWidth="300px" justifyContent="center" transition="all 0.3s ease" cursor="pointer" _hover={{
                 filter: "brightness(85%)"
               }}>
+                <a 
+      href="https://api.whatsapp.com/send?phone=5511959943034&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters"
+      target="_blank"
+      rel="noreferrer"
+      >
                 <Text color="whiteAlpha.900" fontWeight="bold" fontSize="17px">ME CHAME PELO WHATSAPP</Text>
+                </a>
                 <Icon as={RiWhatsappFill} color="whiteAlpha.900"  borderRadius="100%" padding="2px" fontWeight="bold" fontSize="22px"/>
               </HStack>
               </Box>

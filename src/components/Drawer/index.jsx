@@ -21,7 +21,9 @@ import {
     Heading,
     Icon,
     Stack,
-    useBreakpointValue
+    useBreakpointValue,
+    StackDivider,
+    Image
   } from '@chakra-ui/react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -48,7 +50,7 @@ export default function DrawerMenu() {
   })
 
     return(
-      <HStack  alignSelf="flex-end" alignItems="flex-end" justifySelf="space-between">
+      <HStack zIndex={9999} alignSelf="flex-end" alignItems="flex-end" justifySelf="space-between">
  
     <Button ref={btnRef} alignSelf="flex-end" backgroundColor="transparent" onClick={onOpen} padding="30px" _hover={{backgroundColor: 'transparent'}}>
       <FontAwesomeIcon size="1x" icon={faBars} color="#E7C496"/>
@@ -67,7 +69,9 @@ export default function DrawerMenu() {
       
         <DrawerHeader>
         <DrawerCloseButton  color="white" fontSize="xl"  mt="6"/>
-          <Heading fontWeight="semibold" color="white">Menu</Heading>
+          <Heading fontWeight="semibold" color="white">
+            <Image src="/images/logo-branco.png" width="75px" height="75px"/>
+          </Heading>
          
           
           </DrawerHeader>
@@ -290,9 +294,37 @@ export default function DrawerMenu() {
         }
 
         {!isWideVersion && 
-        <VStack  height={"full"} justify="center" spacing="12" paddingX={2}>
+        <VStack  height={"full"} justify="center" spacing="5" paddingX={2} >
 
-        <VStack width="full" fontSize="lg" alignItems="center" cursor="pointer">
+
+          <VStack  width="full" fontSize="lg" alignItems="center" paddingY={7} cursor="pointer">
+
+                
+            
+          
+          <HStack 
+            align="center" 
+            justify="center" 
+            _hover={{}} 
+            onMouseOver={() => setActiveRoteiros(true)} 
+            onMouseLeave={() => setActiveRoteiros(false)}
+
+            >
+
+
+
+
+            <Text color="whiteAlpha.600" fontWeight="semibold" letterSpacing={4} fontSize="12px">MENU</Text>
+            
+            </HStack>
+              
+
+
+            </VStack>
+
+
+
+        <VStack  width="full" fontSize="xl" alignItems="center" cursor="pointer">
 
           
           
@@ -318,19 +350,14 @@ export default function DrawerMenu() {
                 borderColor:"#E7C496"
              }}>Início</Text></Link>
 
-            <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
-              visibility: `${activeInicio? "visible": "hidden"}`,
-              transform: `${activeInicio? "translateX(50%)": "translateX(0%)"}`,
-              transition: "all 0.2s ease-in-out"
-              
-            }}/>
+            
             </HStack>
                
          
           
           </VStack>
           
-          <VStack width="full" fontSize="lg" alignItems="center" cursor="pointer">
+          <VStack width="full" fontSize="xl" alignItems="center" cursor="pointer">
 
                 
             
@@ -359,19 +386,14 @@ export default function DrawerMenu() {
               borderColor:"#E7C496"
           }}>Charters</Text></Link>
 
-          <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
-            visibility: `${activeRoteiros? "visible": "hidden"}`,
-            transform: `${activeRoteiros? "translateX(50%)": "translateX(0%)"}`,
-            transition: "all 0.2s ease-in-out"
-            
-          }}/>
+          
           </HStack>
             
 
 
           </VStack>
 
-          <VStack width="full" fontSize="lg" alignItems="center" cursor="pointer">
+          <VStack  width="full" fontSize="xl" alignItems="center" cursor="pointer">
 
                 
             
@@ -398,19 +420,14 @@ export default function DrawerMenu() {
                 borderColor:"#E7C496"
             }}>Sobre</Text></Link>
 
-            <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
-              visibility: `${activeSobre? "visible": "hidden"}`,
-              transform: `${activeSobre? "translateX(50%)": "translateX(0%)"}`,
-              transition: "all 0.2s ease-in-out"
-              
-            }}/>
+          
             </HStack>
               
 
 
             </VStack>
             
-          <VStack width="full" fontSize="lg" alignItems="center" cursor="pointer">
+          <VStack  width="full" fontSize="xl" alignItems="center" cursor="pointer">
 
                 
             
@@ -437,12 +454,7 @@ export default function DrawerMenu() {
               borderColor:"#E7C496"
           }}>Contato</Text></Link>
 
-          <FontAwesomeIcon icon={faArrowRight} color="#E7C496" transition="all 0.3s ease" style={{
-            visibility: `${activeContato? "visible": "hidden"}`,
-            transform: `${activeContato? "translateX(50%)": "translateX(0%)"}`,
-            transition: "all 0.2s ease-in-out"
-            
-          }}/>
+          
           </HStack>
             
 
@@ -454,7 +466,7 @@ export default function DrawerMenu() {
           
 
 
-          <Stack fontFamily="Poppins" direction="column" alignItems="center" border="1px solid white"  width="100%" >
+          <Stack fontFamily="Poppins" paddingY={10} direction="column" alignItems="center" width="100%" >
         <HStack>
         <a href="https://www.instagram.com/leonardodiasvalente/"rel="noreferrer" target="_blank">
             <Icon 
