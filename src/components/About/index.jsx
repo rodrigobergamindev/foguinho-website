@@ -67,7 +67,7 @@ export default function About() {
                 
                 <HStack  spacing={5}>
                         <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
-                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Marinheiro com vasta experiência em todas as ilhas de Paraty</Text>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Marinheiro com vasta experiência nas ilhas de Paraty</Text>
                 </HStack>
            
                 <HStack spacing={5}>

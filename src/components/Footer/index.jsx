@@ -97,7 +97,7 @@ export default function Footer() {
                         <StackDivider/>
                         <StackDivider/>
                         <HStack>
-                        <Icon as={RiMailLine} fontSize="20"/><Text>telow@hotmail.com</Text>
+                        <Icon as={RiMailLine} fontSize="20"/><Text>leonardonpdias@gmail.com</Text>
                         </HStack>
 
                         <HStack>
@@ -186,7 +186,7 @@ export default function Footer() {
                         <StackDivider/>
                         <StackDivider/>
                         <HStack>
-                        <Icon as={RiMailLine} fontSize="20"/><Text fontSize="md">telow@hotmail.com</Text>
+                        <Icon as={RiMailLine} fontSize="20"/><Text fontSize="md">leonardonpdias@gmail.com</Text>
                         </HStack>
 
                         <HStack>
