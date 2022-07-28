@@ -64,7 +64,7 @@ export default function About() {
               <Box width="20%" height="2px"  marginTop="10px"/>
               </VStack>
               <VStack spacing={5} marginTop="10px" maxW="350px" width="100%" alignItems="flex-start" justifyContent="flex-start">
-                
+                 
                 <HStack  spacing={5}>
                         <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
                         <Text fontSize={["md","lg"]} color="whiteAlpha.900">Marinheiro com vasta experiência nas ilhas de Paraty</Text>
