@@ -85,7 +85,7 @@ export default function FormWhats() {
             <a href="https://www.facebook.com/leonardo.diasvalente" target="_blank"><Image src="/icons/facebook.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
             }}/></a>
-            <a href="https://www.instagram.com/leonardodiasvalente/" target="_blank"><Image src="/icons/instagram.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
+            <a href="https://www.instagram.com/veleirofoguinho/" target="_blank"><Image src="/icons/instagram.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
               transform:"rotateZ(360deg)"
             }}/></a>
             <a href="https://api.whatsapp.com/send?phone=5524998566564&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20charters" target="_blank"><Image src="/icons/whatsapp.svg" width="25px" height="25px" cursor="pointer" transition="all 0.3s ease" _hover={{
