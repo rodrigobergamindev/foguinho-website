@@ -243,7 +243,7 @@ export default function DrawerMenu() {
 
 
           <Stack p={5} direction="row" alignItems="center"  width="100%" >
-        <a href="https://www.instagram.com/leonardodiasvalente/"rel="noreferrer" target="_blank">
+        <a href="https://www.instagram.com/veleirofoguinho/"rel="noreferrer" target="_blank">
             <Icon 
             fontSize="2xl" 
             color="gray.300"
@@ -256,7 +256,7 @@ export default function DrawerMenu() {
             />
         </a>
 
-        <a href="https://www.facebook.com/leonardodiasvalente/" rel="noreferrer" target="_blank">
+        <a href="https://www.instagram.com/veleirofoguinho/" rel="noreferrer" target="_blank">
             <Icon 
             fontSize="2xl" 
             color="gray.300" 
@@ -468,7 +468,7 @@ export default function DrawerMenu() {
 
           <Stack fontFamily="Poppins" paddingY={10} direction="column" alignItems="center" width="100%" >
         <HStack>
-        <a href="https://www.instagram.com/leonardodiasvalente/"rel="noreferrer" target="_blank">
+        <a href="https://www.instagram.com/veleirofoguinho/"rel="noreferrer" target="_blank">
             <Icon 
             fontSize="2xl" 
             color="gray.300"
@@ -481,7 +481,7 @@ export default function DrawerMenu() {
             />
         </a>
 
-        <a href="https://www.facebook.com/leonardodiasvalente/" rel="noreferrer" target="_blank">
+        <a href="https://www.instagram.com/veleirofoguinho/" rel="noreferrer" target="_blank">
             <Icon 
             fontSize="2xl" 
             color="gray.300" 
