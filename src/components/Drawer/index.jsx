@@ -283,7 +283,7 @@ export default function DrawerMenu() {
 
         <Box flex="1" width="100px" height="1px" backgroundColor="gray.50"/>
         
-        <Icon as={RiGpsLine} color="#E7C496"/><Text color="#E7C496" fontWeight="light">Rod. Rio-Santos, BR 101 - KM 578,7 - Boa Vista, Paraty - RJ - 23970-000</Text>
+        <Icon as={RiGpsLine} color="#E7C496"/><Text color="#E7C496" fontFamily="Poppins" fontWeight="light">Rod. Rio-Santos, BR 101 - KM 578,7 - Boa Vista, Paraty - RJ - 23970-000</Text>
         </Stack>
 
       
