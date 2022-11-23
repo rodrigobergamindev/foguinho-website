@@ -22,7 +22,7 @@ const roadmaps = [
   {
     title: 'Engenho D`água',
     city: 'Paraty',
-    description: 'Praia de águas calmas, cristalinas e deserta, vale destacar que fui em uma segunda-feira, dia de baixa temporada e de muito sol, o que faz toda a diferença no visual e na tranquilidade. O acesso é através de barco no saco do Mamanguá, o local conta com trilhas e algumas das mais belas paisagens de Paraty.',
+    description: 'Àguas cristalinas, linda vegetação e quiosques com excelentes opções de culinária caiçara.',
     image: '/images/engenho-dagua.jpg'
   },
   {

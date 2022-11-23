@@ -24,10 +24,14 @@ export default function About() {
 
               <VStack spacing={[5,10]} marginTop="10px" maxW="350px" width="100%" textAlign="justify">
                 <Text color="whiteAlpha.900">
-                Eu sou Leonardo Valente, marinheiro inscrito e habilitado pela Agencia da Capitanias dos Portos de Paraty, 
-                com uma vasta experiência de mais de 6 anos em turismo e navegação, por muito tempo da minha vida morei a bordo 
-                de um veleiro onde obtive a maior parte da minha vivência marítima, velejei nas mais diversas ilhas de Paraty, 
-                onde pude conhecer sobre rotas, navegação e os pontos principais visitados por milhares de turistas todos os anos.
+                Meu nome é Leonardo Valente e sou marinheiro do Veleiro Foguinho.
+                Habilitado pela Agência da Capitania dos portos de Paraty e com mais de 6
+                anos de experiência em navegação decidi morar a bordo do Veleiro Foguinho
+                  por longos 5 anos , ultrapassando obstáculos, imprevistos, pandemia e
+              agregando aprendizado e experiências incríveis pelas ilhas paradisíacas de
+                Paraty. Muitas dessas praias e ilhas fazem parte do roteiro e agora você tem a
+                chance de conhecer de perto estes lugares que são verdadeiras obras de arte
+                da Natureza.
                 </Text>
 
                 <Text color="whiteAlpha.900">
@@ -67,7 +71,7 @@ export default function About() {
                  
                 <HStack  spacing={5}>
                         <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
-                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Marinheiro com vasta experiência nas ilhas de Paraty</Text>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Marinheiro com boas experiências nas ilhas de Paraty</Text>
                 </HStack>
            
                 <HStack spacing={5}>
@@ -78,6 +82,16 @@ export default function About() {
                 <HStack spacing={5}>
                         <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
                         <Text fontSize={["md","lg"]} color="whiteAlpha.900">Embarque geralmente as 9h e desembarque às 15h ou conforme no horário acertado com o cliente</Text>
+                </HStack>
+
+                <HStack spacing={5}>
+                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Os passeios são privativos, só vai você e quem você levar.</Text>
+                </HStack>
+
+                <HStack spacing={5}>
+                        <Icon as={RiCheckFill} color="#448B8B" backgroundColor="whiteAlpha.900" borderRadius="100%" padding="2px" fontWeight="bold" fontSize={["2xl", "2xl"]}/>
+                        <Text fontSize={["md","lg"]} color="whiteAlpha.900">Barco com capacidade de até 6 pessoas</Text>
                 </HStack>
 
                 <HStack spacing={5}>
