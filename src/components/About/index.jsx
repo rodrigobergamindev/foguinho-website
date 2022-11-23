@@ -39,7 +39,7 @@ export default function About() {
                 </Text>
 
                 <Text color="whiteAlpha.900">
-                Viaje com quem entende e conhece a região, viaje com a Foguinho.
+                Viaje com quem entende e conhece a região, viaje com a Veleiro Foguinho.
                 </Text>
 
                 <VStack alignItems="flex-start" alignSelf="flex-start" fontFamily="Poppins">
